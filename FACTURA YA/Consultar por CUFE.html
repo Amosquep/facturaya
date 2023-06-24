@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar por CUFE</title>
+</head>
+<style>
+    body {
+    background-color: #2b2b2b;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin-top: 20px;
+}
+
+a {
+    color: #D4AF37;
+    font-style: italic;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
+button {
+    color: #D4AF37;
+    font-style: italic;
+    text-decoration: none;
+    transition: color 0.3s; 
+}
+
+button:hover {
+    color: red; 
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #D4AF37;
+    margin: 40px auto;
+    width: 80%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.description {
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.results-container {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 20px;
+    margin-top: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.results-container.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.results-container h2 {
+    margin-top: 0;
+    color: #D4AF37;
+}
+
+.results-container p {
+    margin-bottom: 10px;
+}
+</style>
+<body>
+    <div class="container">
+        <h1>Consultar por CUFE</h1>
+        <hr>
+        <p class="description">Ingresa el código CUFE para obtener información</p>
+        <form id="consultation-form">
+            <input type="text" placeholder="Código CUFE" style="width: 96%; padding: 10px;">
+            <input type="text" placeholder="Nombre" style="width: 96%; padding: 10px; margin-top: 10px;">
+            <input type="text" placeholder="Fecha" style="width: 96%; padding: 10px; margin-top: 10px;">
+            <button type="submit" style="width: 100%; padding: 10px; background-color: #D4AF37; color: #ffffff; border: none; cursor: pointer;">Consultar</button>
+        </form>
+        <div class="results-container" id="results-container">
+            <h2>Resultados:</h2>
+            <p>Código CUFE: <span id="cufe-result"></span></p>
+            <p>Nombre: <span id="name-result"></span></p>
+            <p>Fecha: <span id="date-result"></span></p>
+            <p>Otros detalles: <span id="other-details"></span></p>
+            <a href="#" id="download-link" style="display: none;">Descargar factura en PDF</a>
+        </div>
+        <ul>
+            <li><a href="file:///C:/Users/harol/Downloads/FACTURA%20YA/Reportes.html">Siguiente</a></li>
+            <li><a href="file:///C:/Users/harol/Downloads/FACTURA%20YA/Consultar%20por%20numero%20de%20factura.html">Atrás</a></li>
+            <li><a href="file:///C:/Users/harol/Downloads/FACTURA%20YA/Menu.html">Menú</a></li>
+            <li><a href="file:///C:/Users/harol/Downloads/FACTURA%20YA/inicio.html">Cerrar Sesion</a></li>
+        </ul>
+    </div>
+
+    <script>
+        const form = document.getElementById("consultation-form");
+        const resultsContainer = document.getElementById("results-container");
+        const cufeResult = document.getElementById("cufe-result");
+        const nameResult = document.getElementById("name-result");
+        const dateResult = document.getElementById("date-result");
+        const otherDetails = document.getElementById("other-details");
+        const downloadLink = document.getElementById("download-link");
+
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const cufe = form.elements[0].value;
+            const name = form.elements[1].value;
+            const date = form.elements[2].value;
+
+            resultsContainer.classList.add("show");
+
+            cufeResult.textContent = cufe;
+            nameResult.textContent = name;
+            dateResult.textContent = date;
+            otherDetails.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pretium consequat dolor, vitae ultrices mauris fringilla sed.";
+
+            downloadLink.href = "file:///C:/Users/harol/Downloads/100-jhoanmonsalve183gmail-com.pdf";
+            downloadLink.style.display = "inline";
+
+            form.reset();
+        });
+    </script>
+</body>
+</html>
+
+
