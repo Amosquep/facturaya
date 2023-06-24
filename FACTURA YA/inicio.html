@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../FACTURA YA/inicio.css">
+</head>
+
+<body>
+    <div class="superior">
+        <p><em>Hablemos: 3195570258 - Lunes a Viernes de 8 a 17:30 hrs</em></p>
+    </div>
+    <div class="menu">
+        <img src="../FACTURA YA/LOGO.jpg" height="120px" width="120px">
+        <ul>
+            <li id="inicio">Inicio</li>
+            <li id="soluciones">Soluciones</li>
+            <li id="testimonios">Testimonios</li>
+            <li id="contactos">Contactos</li>
+        </ul>
+        <button class="ingresar" onclick="showLoginForm()">INGRESAR</button>
+        <button class="registrarse" onclick="showRegisterForm()">REGISTRARSE</button>
+    </div>
+    <div class="login-form" id="loginForm">
+        <h2 class="form-title"></h2>
+        <form>
+            <input type="text" placeholder="Usuario" required>
+            <input type="password" placeholder="Contraseña" required>
+            <button type="submit" class="form-button"><a href="file:///C:/Users/harol/Downloads/FACTURA%20YA/Menu.html">INICIAR SESION</a></button>
+        </form>
+        <a href="#" onclick="forgotPassword()">¿Olvidaste tu contraseña?</a>
+    </div>
+    <div class="register-form" id="registerForm">
+        <h2 class="form-title">Registrarse</h2>
+        <form>
+            <input type="text" placeholder="Nombre" required>
+            <input type="email" placeholder="Correo Electrónico" required>
+            <input type="number" placeholder="Numero" required>
+            <input type="password" placeholder="Contraseña" required>
+            <input type="password" placeholder="Confirmar contraseña" required>
+            <button type="submit" class="form-button">Registrarse</button>
+        </form>
+    </div>
+
+    <script>
+        function showLoginForm() {
+            var loginForm = document.getElementById("loginForm");
+            var registerForm = document.getElementById("registerForm");
+
+            loginForm.style.display = "block";
+            registerForm.style.display = "none";
+        }
+
+        function showRegisterForm() {
+            var loginForm = document.getElementById("loginForm");
+            var registerForm = document.getElementById("registerForm");
+
+            loginForm.style.display = "none";
+            registerForm.style.display = "block";
+        }
+
+        function forgotPassword() {
+            alert("Se ha enviado un correo electrónico con instrucciones para restablecer su contraseña.");
+            window.location.href = "file:///C:/Users/harol/Downloads/FACTURA%20YA/Restablecimiento%20de%20contrase%C3%B1a.html";
+        }
+    </script>
+
+    <div>
+        <img src="../FACTURA YA/banner.png" height="450px" width="1300px">
+    </div>
+    <div id="pagina">
+        <h1>!ALEGRA TU EMPRESA¡</h1>
+    </div>
+    </div>
+    <br><br>
+    <h2>Genera y envía tus facturas de manera automática desde la nube</h2>
+    <br>
+    <h3>NUESTROS SERVICIOS</h3>
+    <div class="container">
+        <div class="box">
+            <h3>Factura electronica</h3>
+            <div class="image-container">
+                <img src="../FACTURA YA/factura electronica.png" alt="Imagen 1" class="round-image">
+            </div>
+            <p>Crea facturas elecronicas estandar, de exportacion o con AIU.</p>
+            <hr>
+        </div>
+        <div class="box">
+            <h3>Aprobado en 10 minutos</h3>
+            <div class="image-container">
+                <img src="../FACTURA YA/reloj.png" alt="Imagen 2" class="round-image">
+            </div>
+            <p>Emite facturas electronicas en tiempo record.</p>
+            <hr>
+        </div>
+        <div class="box">
+            <h3>Provedor tecnologico</h3>
+            <div class="image-container">
+                <img src="../FACTURA YA/provedor.jpeg" alt="Imagen 2" class="round-image">
+            </div>
+            <p>Sin intermidiarios. Autorizados por la DIAN para emitir tus comprobantes</p>
+            <hr>
+        </div>
+    </div>
+    <div class="banner">
+        <h3>Empieza tus 15 días gratis.</h3>
+        <p>Más de 300.000 empresas en Latinoamérica ya se han registrado.</p>
+        <p>Prueba todas las características de Alegra Software Contable sin limitaciones.</p>
+        <button class="cta-button">Crear tu cuenta</button>
+    </div>
+    <hr>
+    <footer>
+        <h3>Contactos</h3>
+        <ul>
+            <li>Teléfono: <a href="tel:+123456789">+57 3195570258</a></li>
+            <li>Correo electrónico: <a href="mailto:info@example.com">infofacturaya@facturaya.com</a></li>
+            <li>Dirección: 123 Calle Principal, Medellin, Colombia</li>
+            <li>Redes sociales:
+                <ul>
+                    <li><a href="https://www.facebook.com/facturaya" target="_blank">Facebook</a></li>
+                    <li><a href="https://twitter.com/facturaya" target="_blank">Twitter</a></li>
+                    <li><a href="https://www.linkedin.com/company/facturaya" target="_blank">LinkedIn</a></li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+.label-input {
+    min-width: 200px;
+    display: inline-block;
+}
+.contenedor{
+width: 400px;
+margin: 0 auto;
+}
+body{
+    background-color: black;
+    color: white;
+}
+input  {
+    background-color: rgb(53, 66, 6);
+    color: black;
+    border-radius: 12px;
+    border: 8px; color: white;
+}
+
+button{
+    background-color: yellow;
+    color: black;
+    border-radius: 9px; color:b;
+}
+h1{
+    color: yellow;
+    text-align: center;
+}
+.final{
+    background-color: white;
+}
